@@ -14,5 +14,4 @@ Step 2 is not yet available as a script.
 * Detect and label TLS modelled as connected components using Plugins -> Process -> [Find Connected Regions](https://www.longair.net/edinburgh/imagej/find-connected-regions/). Set an appropriate 'Minimum number of points in a region', which sets the minimum TLS size according to your grid_spacing (e.g. setting 25 for grid_spacing = 20 corresponds to requiring a minimum surface of 10000 square microns to call a TLS).
 * Save the labelled matrix with File -> Save As -> Text Image...
 
-**Step 3**
-Run various downstream analyses with _TLSfinder_analyses.R_
+The pixels of the saved labelled matrix contain non-zero values in correspondance to TLSs and each TLS is labelled with a unique ID (integer ranging from 1 to N, N = total number of TLSs). The matrix can thus be intersected with count matrices of other cell types or with annotations (e.g. regions extracted with GridQuant step 1.2) to perform downstream statistical analyses.
